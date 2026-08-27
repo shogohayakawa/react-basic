@@ -1,7 +1,6 @@
 import React from 'react';
 
-export function Header() {
-  const siteTitle = 'Reactの基礎を学ぼう';
+export function Header({ siteTitle = 'サイト名未設定' }) {
 
   return (
     <header>

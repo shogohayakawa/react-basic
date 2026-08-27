@@ -1,8 +1,6 @@
 import React from 'react';
 
-export function Footer() {
-  const currentYear = new Date().getFullYear();
-  const siteTitle = 'Reactの基礎を学ぼう';
+export function Footer({ siteTitle = 'サイト名未設定', currentYear = new Date().getFullYear() }) {
 
   return (
     <footer>

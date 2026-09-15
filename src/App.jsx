@@ -3,6 +3,7 @@ import { Header } from './components/Header';
 import { MainContent } from './components/MainContent';
 import { Footer } from './components/Footer';
 import { useState, useEffect } from 'react';
+import { ThemeProvider } from './components/ThemeProvider';
 
 function App() {
   const siteTitle = 'Reactの基礎を学ぼう';
@@ -17,11 +18,11 @@ function App() {
   }, []); // コンポーネントの初回描画時にのみ実行
 
   return (
-    <>
+    <ThemeProvider>
       <Header siteTitle={siteTitle} />
       <MainContent progress={progress} setProgress={setProgress} />
       <Footer siteTitle={siteTitle} currentYear={currentYear} />
-    </>
+    </ThemeProvider>
   )
 }
 
